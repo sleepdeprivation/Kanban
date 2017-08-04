@@ -1,0 +1,14 @@
+
+  <div [ngStyle]="{'background-color': headercolor}" class="cardcolumn-header">
+    {{name}}
+  </div>
+  <div *ngFor="let card of cards; let i = index;">
+    <div class="cardWrapper">
+      <span class="glyphicon glyphicon-chevron-left leftArrow" (click)="clickedLeftArrow(i)"></span>
+      <card text={{card.cardText}}></card>
+      <span class="glyphicon glyphicon-chevron-right rightArrow" (click)="clickedRightArrow(i)"></span>
+    </div>
+  </div>
+  <div>
+    <span class="glyphicon glyphicon-plus" (click)="clickedAdd()"></span>Add a card
+  </div>
